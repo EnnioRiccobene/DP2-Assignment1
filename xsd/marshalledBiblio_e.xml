@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:biblio xmlns:ns2="http://pad.polito.it/dp2/biblio_e">
+    <book ISBN="0131411551" publicationYear="2004" id="2">
+        <author>W. Richard Stevens</author>
+        <author>Bill Fenner</author>
+        <author>Andrew M. Rudoff</author>
+        <title>Unix network programming</title>
+        <subtitle>Volume 1: The sockets networking API</subtitle>
+        <publisher>Addison Wesley</publisher>
+    </book>
+    <article journal="1551-3203" issue="7" id="1">
+        <author>M. Cheminod</author>
+        <author>A. Pironti</author>
+        <author>R. Sisto</author>
+        <title>Formal Vulnerability Analysis of a Security System for Remote Fieldbus Access</title>
+    </article>
+    <article journal="0141-9331" issue="0" id="0">
+        <author>T. Sauter</author>
+        <author>C. Schwaiger</author>
+        <title>Achievement of secure Internet access to fieldbus systems</title>
+        <citedBy>1</citedBy>
+    </article>
+    <journal ISSN="1551-3203">
+        <title>IEEE Transactions on Industrial Informatics</title>
+        <publisher>IEEE</publisher>
+        <issue id="1" year="2011" number="1"/>
+        <issue id="2" year="2011" number="2"/>
+        <issue id="3" year="2011" number="3"/>
+        <issue id="4" year="2011" number="4"/>
+        <issue id="5" year="2011" number="5"/>
+        <issue id="6" year="2011" number="6"/>
+        <issue id="7" year="2011" number="7"/>
+        <issue id="8" year="2011" number="8"/>
+        <issue id="9" year="2011" number="9"/>
+        <issue id="10" year="2011" number="10"/>
+        <issue id="11" year="2011" number="11"/>
+        <issue id="12" year="2011" number="12"/>
+    </journal>
+    <journal ISSN="0141-9331">
+        <title>Microprocessors and Microsystems</title>
+        <publisher>Elsevier</publisher>
+        <issue id="0" year="2002" number="7"/>
+    </journal>
+</ns2:biblio>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tns:bankaccount xmlns:tns="http://pad.polito.it/dp2/accounts"
+            	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            	 xsi:schemaLocation="http://pad.polito.it/dp2/accounts accounts.xsd ">
+
+  <accountHolder name="Elia" address="Via dei Pioppi, 20" fiscalID="CTGLEI95T25A512F" />
+  <accountHolder name="Ennio" address="Viale Anastasi, 25" fiscalID="RCCNNE91T16B429H" />
+  <accountHolder name="Saro" address="Via Guidi, 45" fiscalID="GTNSRA91T16B429O" />
+  <account accountNumber="745">
+  	<accHolder>CTGLEI95T25A512F</accHolder>
+  	<accHolder>RCCNNE91T16B429H</accHolder>
+    <yearOperations year="2019" accountNumber="745">
+      <operation date="2019-10-21Z" amount="123.45">
+        <description>my try</description>
+      </operation>
+      <operation date="2019-12-13Z" amount="12.12"/>
+    </yearOperations>
+    <yearOperations year="2018" accountNumber="745">
+      <operation date="2018-10-21Z" amount="323.45">
+        <description>my try</description>
+      </operation>
+      <operation date="2018-08-13Z" amount="52.12"/>
+    </yearOperations>
+  </account>
+  <account accountNumber="352">
+  	<accHolder>RCCNNE91T16B429H</accHolder>
+  	<accHolder>GTNSRA91T16B429O</accHolder>
+    <yearOperations year="2019" accountNumber="352">
+      <operation date="2019-10-21Z" amount="123.45">
+        <description>my try</description>
+      </operation>
+      <operation date="2019-12-13Z" amount="12.12"/>
+    </yearOperations>
+    <yearOperations year="2017" accountNumber="352">
+      <operation date="2017-10-21Z" amount="323.45">
+        <description>my try</description>
+      </operation>
+      <operation date="2017-08-13Z" amount="52.12"/>
+    </yearOperations>
+  </account>
+</tns:bankaccount>

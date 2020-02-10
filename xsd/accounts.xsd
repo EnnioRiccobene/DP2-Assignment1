@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	    targetNamespace="http://pad.polito.it/dp2/accounts"
+	    xmlns:tns="http://pad.polito.it/dp2/accounts"
+> 
+
+ <element name="bankaccount">
+ 	<complexType>
+ 		<sequence>
+ 			<element name="accountHolder" type="tns:HolderType" minOccurs="1" maxOccurs="unbounded"/>
+ 			<element name="account" type="tns:AccountType" minOccurs="1" maxOccurs="unbounded">
+ 				<unique name="accountOwnerKey">
+					<selector xpath="accHolder" />
+					<field xpath="." />
+				</unique>
+			</element>
+ 		</sequence>
+ 	</complexType>
+ 	<key name="accountHolderKey">
+		<selector xpath="accountHolder" />
+		<field xpath="@fiscalID" />
+	</key>
+	<keyref name="accountReference" refer="tns:accountHolderKey">
+		<selector xpath="account/accHolder" />
+		<field xpath="." />
+	</keyref>	
+	<key name="accountKey">
+		<selector xpath="account" />
+		<field xpath="@accountNumber" />
+	</key>
+	<keyref name="accountNumRef" refer="tns:accountKey">
+		<selector xpath="account/yearOperations" />
+		<field xpath="@accountNumber" />
+	</keyref>
+	<unique name="yearOperationsUniqueness">
+		<selector xpath="account/yearOperations" />
+		<field xpath="@accountNumber"/>
+		<field xpath="@year" />
+	</unique>
+ </element>
+ 
+ <complexType name="AccountType"> 
+ 	<sequence> 
+    	<element name="accHolder" type="tns:fiscalIDformat" minOccurs="1" maxOccurs="unbounded"/>
+    	<element name="yearOperations" type="tns:YearOperationsType" minOccurs="0" maxOccurs="unbounded"/> 
+   	</sequence> 
+   	<attribute name="accountNumber" type="positiveInteger" use="required"/>
+ </complexType>
+
+ <complexType name="HolderType">
+ 	<attribute name="name" type="string" use="required"/>
+  	<attribute name="address" type="string" use="required"/>
+  	<attribute name="fiscalID" type="tns:fiscalIDformat" use="required"/>
+ </complexType>
+
+ <complexType name="YearOperationsType">
+  	<sequence> 
+   		<element name="operation" type="tns:OperationType" minOccurs="1" maxOccurs="unbounded"/> 
+  	</sequence> 
+  	<attribute name="year" type="positiveInteger" use="required"/>
+  	<attribute name="accountNumber" type="positiveInteger " use="required"/>
+ </complexType>
+ 
+ <simpleType name="Currency">
+  	<restriction base="decimal"> 
+   		<fractionDigits value="2"/> 
+  	</restriction> 
+ </simpleType>
+ 
+  <simpleType name="utcDate">
+  	<restriction base="date"> 
+   		<pattern value="[0-9]{4}[-][01][0-9][-][0-3][0-9][Z]"/> 
+  	</restriction> 
+ </simpleType>
+
+ <complexType name="OperationType">
+  	<all>
+    	<element name="description" type="string" minOccurs="0"/>
+  	</all>
+  	<attribute name="date" type="tns:utcDate" use="required"/>	
+  	<attribute name="amount" type="tns:Currency" use="required"/>
+ </complexType>
+ 
+ <!-- fiscalID contains 16 alphanumeric characters. The format is that defined in Italy -->  
+ <simpleType name="fiscalIDformat"> 
+ 	<restriction base="string"> 
+		<pattern value="[A-Z]{6}[0-9A-Z][0-9LMNPQRSTUV][ABCDEHLMPRST][0-9LMNPQRSTUV]{2}[A-Z][0-9LMNPQRSTUV]{3}[A-Z]" />
+	</restriction> 
+ </simpleType>
+</schema> 

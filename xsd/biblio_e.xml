@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tns:biblio xmlns:tns="http://pad.polito.it/dp2/biblio_e"
+           	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://pad.polito.it/dp2/biblio_e biblio_e.xsd ">
+
+  <book id="3" ISBN="0131411551" publicationYear="2004">
+    <author>W. Richard Stevens</author>
+    <author>Bill Fenner</author>
+    <author>Andrew M. Rudoff</author>
+    <title>Unix network programming</title>
+    <subtitle>Volume 1: The sockets networking API</subtitle>
+    <publisher>Addison Wesley</publisher>
+  </book>  
+  <book id="4" ISBN="0131481552" publicationYear="2008">
+    <author>Samuel L. Jackson</author>
+    <title>Biography of Nick Fury</title>
+    <citedBy>1</citedBy>
+    <citedBy>2</citedBy>
+    <publisher>Marvel Comics</publisher>
+  </book>  
+  <article journal="0141-9331" issue="0" id="2">
+    <author>T. Sauter</author>
+    <author>C. Schwaiger</author>
+    <title>Achievement of secure Internet access to fieldbus systems</title>
+    <citedBy>1</citedBy>
+  </article>
+  <article journal="1551-3203" issue="7" id="1">
+    <author>M. Cheminod</author>
+    <author>A. Pironti</author>
+    <author>R. Sisto</author>
+    <title>Formal Vulnerability Analysis of a Security System for Remote Fieldbus Access</title>
+  </article>  
+  <journal ISSN="0141-9331">
+  	<title>Microprocessors and Microsystems</title>
+  	<publisher>Elsevier</publisher>
+    <issue id="0" number="7" year="2002"/>
+  </journal>
+  <journal ISSN="1551-3203">
+    <title>IEEE Transactions on Industrial Informatics</title>
+    <publisher>IEEE</publisher>
+    <issue id="1" number="1" year="2011"/>
+    <issue id="2" number="2" year="2011"/>
+    <issue id="3" number="3" year="2011"/>
+    <issue id="4" number="4" year="2011"/>
+    <issue id="5" number="5" year="2011"/>
+    <issue id="6" number="6" year="2011"/>
+    <issue id="7" number="7" year="2011"/>
+    <issue id="8" number="8" year="2011"/>
+    <issue id="9" number="9" year="2011"/>
+    <issue id="10" number="10" year="2011"/>
+    <issue id="11" number="11" year="2011"/>
+    <issue id="12" number="12" year="2011"/>
+  </journal>
+</tns:biblio>
